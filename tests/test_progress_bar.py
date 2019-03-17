@@ -43,7 +43,7 @@ def test_width():
 
 def test_item_tracking():
     items = ['file_%s.csv' % i for i in range(0, n)]
-    bar = pyprind.ProgBar(len(items))
+    bar = pyprind.ProgBar(len(items),bar_char='>')
     for i in items:
         time.sleep(sleeptime)
         bar.update(item_id=i)
